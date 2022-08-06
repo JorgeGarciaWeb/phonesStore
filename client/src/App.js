@@ -1,10 +1,18 @@
 import './App.css'
-import HomePage from './pages/HomePage/HomePage'
+import Navigation from './pages/Navigation/Navigation'
+import AppRoutes from './Routes/AppRoutes'
 
 function App() {
+
   return (
+
     <div className="App">
-     <HomePage />
+
+     <Navigation />
+     
+     <AppRoutes />
+  
+
     </div>
   )
 }

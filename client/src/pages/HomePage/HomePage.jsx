@@ -1,14 +1,28 @@
-import Container from 'react-bootstrap'
+import {Container, Row, Col, Button} from 'react-bootstrap'
+import { Link } from "react-router-dom"
 
 const HomePage = () => {
 
     return (
-       <Container>
+        <Container>
 
+        <Row>
 
+            <Col md={{ span: 6, offset: 3 }}>
+                <hr />
+                <br />
+                <h1>Phone App!</h1>
+                <hr />
+                <p>All phone available</p>
+                <Link to="/phones">
+                    <Button variant="dark" >Go to gallery</Button>
+                </Link>
 
+            </Col>
 
-       </Container>
+        </Row>
+
+    </Container>
     )
 }
 
