@@ -1,12 +1,12 @@
-
-import './App.css';
+import './App.css'
+import HomePage from './pages/HomePage/HomePage'
 
 function App() {
   return (
     <div className="App">
-     <h1>no arriesgo!</h1>
+     <HomePage />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
