@@ -1,10 +1,7 @@
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import {Button ,Form,Nav, NavDropdown,Container, Navbar} from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 import './Navigation.css'
+
 
 function Navigation() {
   return (
@@ -13,7 +10,7 @@ function Navigation() {
     <Container>
     <Navbar bg="light" expand="lg">
       <Container fluid>
-        <Navbar.Brand href="#">Call me_</Navbar.Brand>
+        <Navbar.Brand href="/">Call me_</Navbar.Brand>
         
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
@@ -23,12 +20,11 @@ function Navigation() {
             navbarScroll
             
           >
-          
-          
-            <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">Phones</Nav.Link>
+          <Nav.Link href="#action1">Home</Nav.Link>
             <NavDropdown title="User" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Sign Up</NavDropdown.Item>
+              <Link to='/signup'>
+                <NavDropdown.Item>Sign Up</NavDropdown.Item>
+              </Link>
               <NavDropdown.Item href="#action4">
                 Log In
               </NavDropdown.Item>
@@ -37,6 +33,7 @@ function Navigation() {
                 Log Out
               </NavDropdown.Item>
             </NavDropdown>
+            <Nav.Link href="#action2">Phones</Nav.Link>
             <Nav.Link href="#" disabled>
               About Us
             </Nav.Link>
@@ -51,7 +48,7 @@ function Navigation() {
               className="me-2"
               aria-label="Search"
             />
-            <Button variant="outline-success">Search</Button>
+            <Button variant="outline-dark">Search</Button>
           </Form>
           </Container>
           </>
