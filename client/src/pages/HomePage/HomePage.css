@@ -1,0 +1,20 @@
+.pic-background {
+   margin: 20px;
+   padding: 20px;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-color: rgb(239, 239, 239);
+   border-radius: 20px;
+}
+.imgnormalizada img {
+    width: auto;
+    height: 225px;
+    max-height: 225px;
+}
+
+.buttonHome {
+    padding: 10px;
+    padding-top: 15px;
+    text-align: center;
+}

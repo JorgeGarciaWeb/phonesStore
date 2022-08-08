@@ -1,80 +1,61 @@
-const Navigation = () => {
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import Form from 'react-bootstrap/Form';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import './Navigation.css'
 
-    return ( 
+function Navigation() {
+  return (
 
-        <>
-         <nav class="navbar navbar-expand-lg fixed-top navbar-scroll">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#!">CraftY</a>
-      <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
-        data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#!">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#!">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#!">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#!">Attractions</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#!">Opinions</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#!">Contact</a>
-          </li>
-        </ul>
-        <ul class="navbar-nav d-flex flex-row">
-          <li class="nav-item me-3 me-lg-0">
-            <a class="nav-link" href="#!">
-              <i class="fas fa-shopping-cart"></i>
-            </a>
-          </li>
-          <li class="nav-item me-3 me-lg-0">
-            <a class="nav-link" href="#!">
-              <i class="fab fa-twitter"></i>
-            </a>
-          </li>
-          <li class="nav-item me-3 me-lg-0">
-            <a class="nav-link" href="#!">
-              <i class="fab fa-instagram"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  
-  <section>
-    <div id="intro" className="bg-image" >
-      <div class="mask">
-        <div class="container d-flex justify-content-center align-items-center h-100">
-          <div class="row align-items-center">
-            <div class="col-12">
-              <h1 class="mb-0 text-white display-1">Studio</h1>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
- 
-
- 
-  
- 
-
-
-</>
-    )
+    <>
+    <Container>
+    <Navbar bg="light" expand="lg">
+      <Container fluid>
+        <Navbar.Brand href="#">Call me_</Navbar.Brand>
+        
+        <Navbar.Toggle aria-controls="navbarScroll" />
+        <Navbar.Collapse id="navbarScroll">
+          <Nav
+            className="me-auto my-2 my-lg-0"
+            style={{ maxHeight: '100px' }}
+            navbarScroll
+            
+          >
+          
+          
+            <Nav.Link href="#action1">Home</Nav.Link>
+            <Nav.Link href="#action2">Phones</Nav.Link>
+            <NavDropdown title="User" id="navbarScrollingDropdown">
+              <NavDropdown.Item href="#action3">Sign Up</NavDropdown.Item>
+              <NavDropdown.Item href="#action4">
+                Log In
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action5">
+                Log Out
+              </NavDropdown.Item>
+            </NavDropdown>
+            <Nav.Link href="#" disabled>
+              About Us
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+    <Form className="d-flex">
+            <Form.Control
+              type="search"
+              placeholder="what are you looking for? iPhone11, SamsungGalaxy"
+              className="me-2"
+              aria-label="Search"
+            />
+            <Button variant="outline-success">Search</Button>
+          </Form>
+          </Container>
+          </>
+  );
 }
 
-export default Navigation
+export default Navigation;
