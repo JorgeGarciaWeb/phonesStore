@@ -1,7 +1,5 @@
 import {Button ,Form,Nav, NavDropdown,Container, Navbar} from 'react-bootstrap'
-import { Link } from 'react-router-dom'
 import './Navigation.css'
-
 
 function Navigation() {
   return (
@@ -17,30 +15,32 @@ function Navigation() {
           <Nav
             className="me-auto my-2 my-lg-0"
             style={{ maxHeight: '100px' }}
-            navbarScroll
-            
-          >
+            navbarScroll>
+
           <Nav.Link href="#action1">Home</Nav.Link>
             <NavDropdown title="User" id="navbarScrollingDropdown">
-              <Link to='/signup'>
-                <NavDropdown.Item>Sign Up</NavDropdown.Item>
-              </Link>
-              <NavDropdown.Item href="#action4">
+             <NavDropdown.Item href="/signup">
+                Sign Up
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/login">
                 Log In
               </NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">
+              <NavDropdown.Item href="/logout">
                 Log Out
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#action2">Phones</Nav.Link>
-            <Nav.Link href="#" disabled>
-              About Us
+              <Nav.Link href="/phones">
+                Phones
+              </Nav.Link>
+            <Nav.Link href="/about" disabled>
+                About Us
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
+
     <Form className="d-flex">
             <Form.Control
               type="search"
@@ -49,10 +49,10 @@ function Navigation() {
               aria-label="Search"
             />
             <Button variant="outline-dark">Search</Button>
-          </Form>
-          </Container>
-          </>
-  );
+    </Form>
+        </Container>
+  </>
+  )
 }
 
-export default Navigation;
+export default Navigation

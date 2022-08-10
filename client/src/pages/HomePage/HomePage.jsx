@@ -22,7 +22,7 @@ const HomePage = () => {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://www.rossellimac.es/wp-content/uploads/iPhone-13-pro-family-1-1.jpg"
+          src="https://www.apple.com/v/iphone-13/f/images/overview/hero/hero_1_static__feiuc1zaeiaa_large.jpg"
           alt="Second slide"
         />
 
