@@ -23,6 +23,10 @@ const userSchema = new Schema(
     password: {
       type: String,
       require: true
+    },
+    avatar: {
+      type: String,
+      default: "https://static2.elnortedecastilla.es/www/pre2017/multimedia/noticias/201501/12/media/cortadas/facebook-profile-picture-no-pic-avatar--575x323.jpg" 
     }
   },
   {
